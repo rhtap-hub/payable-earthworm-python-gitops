@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: payable-earthworm-python
+  janus-idp.io/tekton: payable-earthworm-python
+  backstage.io/kubernetes-id: payable-earthworm-python
+  backstage.io/kubernetes-namespace: rhtap-demo 
+  app.kubernetes.io/part-of: payable-earthworm-python
+resources: 
+- deployment.yaml
+- route.yaml
+- service.yaml
